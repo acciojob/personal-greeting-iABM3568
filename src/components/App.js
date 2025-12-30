@@ -16,7 +16,7 @@ const App = () => {
       />
 
       {name.trim() !== "" && (
-        <p>Hello, {name.trim()}!</p>
+        <p>Hello {name.trim()}!</p>
       )}
     </div>
   );
