@@ -4,20 +4,19 @@ import "../styles/App.css";
 const App = () => {
   const [name, setName] = useState("");
 
-  const isValidName = name.trim().length > 0;
-
   return (
     <div id="main">
       <label>Enter your name:</label>
 
       <input
         type="text"
+        placeholder="Enter your name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
 
-      {isValidName && (
-        <h1>Hello, {name.trim()}!</h1>
+      {name.trim() !== "" && (
+        <p>Hello, {name.trim()}!</p>
       )}
     </div>
   );
