@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import '../styles/App.css';
+import React, { useState } from "react";
+import "../styles/App.css";
 
 const App = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   return (
     <div id="main">
-      <input 
-        type="text" 
+      <label>Enter your name:</label>
+      <input
+        type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="Enter your name"
       />
-      {name && <p>Hello, {name}!</p>}
+      {name && <h1>Hello, {name}!</h1>}
     </div>
   );
-}
+};
 
 export default App;
