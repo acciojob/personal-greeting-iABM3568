@@ -5,7 +5,7 @@ const App = () => {
   const [name, setName] = useState('');
 
   return (
-    <div>
+    <div id="main">
       <input 
         type="text" 
         value={name}
