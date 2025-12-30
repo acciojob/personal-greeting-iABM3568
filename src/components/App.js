@@ -4,15 +4,22 @@ import "../styles/App.css";
 const App = () => {
   const [name, setName] = useState("");
 
+  const trimmedName = name.trim();
+
   return (
     <div id="main">
-      <label>Enter your name:</label>
+      <label htmlFor="name-input">Enter your name:</label>
+
       <input
+        id="name-input"
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      {name && <h1>Hello, {name}!</h1>}
+
+      {trimmedName && (
+        <h1 id="greeting">Hello, {trimmedName}!</h1>
+      )}
     </div>
   );
 };
